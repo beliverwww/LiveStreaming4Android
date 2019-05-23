@@ -1,2 +1,2 @@
 # LiveStreaming For Android
-Helpful Repository
+Capture Video from Android Camera and publish streaming with RTMP protocol
