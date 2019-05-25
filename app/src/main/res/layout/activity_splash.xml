@@ -5,12 +5,16 @@
 	android:layout_height="match_parent"
 	android:background="@android:color/holo_green_dark">
 
-	<TextView
+	<Button
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_centerInParent="true"
 		android:textSize="30dp"
-		android:text="@string/Wait"
-		android:id="@+id/wait_text"/>
+		android:text="@string/press_long"
+		android:textColor="@android:color/white"
+		android:background="@android:color/holo_red_light"
+		android:paddingRight="10dp"
+		android:paddingLeft="10dp"
+		android:id="@+id/longpress_button"/>
 
 </RelativeLayout>
