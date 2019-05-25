@@ -4,5 +4,5 @@
 	<string name="udp_url">udp://192.168.200.165:5555</string>
 	<string name="udp_start">UDP Start</string>
 	<string name="press_long">Please Long Press</string>
-
+	<string name="pressback_twice">Press back again.</string>
 </resources>

@@ -11,11 +11,14 @@ import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class ActivityMain extends Activity {
 
 	private EditText edtUrl;
 	private Button btnStart;
+	private int finishbutton_count = 0;
+	private long click_time = -1;
 
 	@RequiresApi(api = Build.VERSION_CODES.M)
 	@Override
@@ -41,4 +44,30 @@ public class ActivityMain extends Activity {
 		requestPermissions(new String[] {Manifest.permission.CAMERA}, requestCode);
 	}
 
+	@Override
+	protected void onResume() {
+		super.onResume();
+		finishbutton_count = 0;
+		click_time = -1;
+	}
+
+	@Override
+	public void onBackPressed() {
+		checkFinish();
+	}
+
+	private void checkFinish() {
+		if (finishbutton_count == 0) {
+			finishbutton_count = 1;
+			click_time = System.currentTimeMillis();
+			Toast.makeText(getApplicationContext(),R.string.pressback_twice,Toast.LENGTH_SHORT).show();
+		} else if (finishbutton_count == 1) {
+			if (System.currentTimeMillis() - click_time <= 1000)
+				super.onBackPressed();
+			else {
+				click_time = System.currentTimeMillis();
+				Toast.makeText(getApplicationContext(),R.string.pressback_twice,Toast.LENGTH_SHORT).show();
+			}
+		}
+	}
 }
