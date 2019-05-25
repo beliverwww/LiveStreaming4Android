@@ -3,20 +3,27 @@
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	android:background="@android:color/white"
+	android:background="@android:color/holo_green_light"
 	android:padding="20dp">
-
-	<EditText
-		android:id="@+id/ID_EDT_URL"
+	<LinearLayout
 		android:layout_width="match_parent"
-		android:layout_height="80dp"
-		android:text="@string/udp_url" />
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:layout_centerInParent="true">
+		<EditText
+			android:id="@+id/ID_EDT_URL"
+			android:layout_width="match_parent"
+			android:layout_height="80dp"
+			android:text="@string/udp_url"
+			android:background="@android:color/darker_gray"
+			android:paddingLeft="10dp" />
 
-	<Button
-		android:id="@+id/ID_BTN_START"
-		android:layout_width="match_parent"
-		android:layout_height="80dp"
-		android:layout_below="@id/ID_EDT_URL"
-		android:text="@string/udp_start" />
-
+		<Button
+			android:id="@+id/ID_BTN_START"
+			android:layout_width="match_parent"
+			android:layout_height="80dp"
+			android:layout_marginTop="10dp"
+			android:layout_below="@id/ID_EDT_URL"
+			android:text="@string/udp_start" />
+	</LinearLayout>
 </RelativeLayout>
