@@ -3,5 +3,6 @@
 	<string name="app_name">RtmpSend</string>
 	<string name="udp_url">udp://192.168.200.165:5555</string>
 	<string name="udp_start">UDP Start</string>
+	<string name="Wait">Please Wait...</string>
 
 </resources>
